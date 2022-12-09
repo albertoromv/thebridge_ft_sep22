@@ -16,7 +16,7 @@ def makecalc():
     prediction = np.array2string(model.predict(data))
     return jsonify(prediction)
 
-modelfile = '1-Flask/1-Routing/flask_wine/flask_wine/models/final_prediction.pickle'
+modelfile = './1-Routing/flask_wine/flask_wine/models/final_prediction.pickle'
 model = p.load(open(modelfile, 'rb'))
 
 print(type(model))
